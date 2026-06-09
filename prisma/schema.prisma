@@ -1,0 +1,32 @@
+// Supports PostgreSQL (Neon / Supabase) — change provider to "mysql" for TiDB Cloud
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum Category {
+  Exam
+  Event
+  General
+}
+
+enum Priority {
+  Normal
+  Urgent
+}
+
+model Notice {
+  id          Int      @id @default(autoincrement())
+  title       String
+  body        String   @db.Text
+  category    Category @default(General)
+  priority    Priority @default(Normal)
+  publishDate DateTime
+  imageUrl    String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
