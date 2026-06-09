@@ -4,8 +4,8 @@ A full-stack notice board with complete CRUD operations, built with Next.js 14 (
 
 ## Live Demo
 
-- **Vercel**: _Add your deployed URL here_
-- **GitHub**: _Add your repo URL here_
+- **Vercel**: https://reno-notice-board-4k338vzc7-abhishek-dev-2026.vercel.app
+- **GitHub**: https://github.com/ABHI0702Y/reno-notice-board
 
 ## Features
 
